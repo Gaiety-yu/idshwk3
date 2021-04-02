@@ -7,7 +7,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string) {
 		if (orig_addr in AgentTable) {
 			add AgentTable[orig_addr][agent];
 		} 
-    else {
+		else {
 			AgentTable[orig_addr] = set(agent);
 		}
 	}
